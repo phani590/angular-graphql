@@ -1,0 +1,40 @@
+<form [formGroup]="group">
+  <div>
+    <input type="radio" formControlName="errorItem" value="Error1" />
+    <label>Error1</label>
+  </div>
+  <div>
+    <input type="radio" formControlName="errorItem" value="Error2" />
+    <label>Error2</label>
+    <input type="text" formControlName="error21" name="error51" id="error21" />
+  </div>
+  <div>
+    <input type="radio" formControlName="errorItem" value="Error3" />
+    <label>Error3</label>
+    <input type="radio" formControlName="error31" value="Buyer" id="buyer" name="eeror31" /><label>Buyer</label>
+    <input type="radio" formControlName="error31" value="Seller" id="Seller" name="eeror31" /><label>Seller</label>
+  </div>
+  <div>
+    <input type="radio" formControlName="errorItem" value="Error4" />
+    <label>Error4</label>
+    <input type="text" formControlName="error41" name="error41" id="error41" /> &
+    <input type="text" formControlName="error42" name="error42" id="error42" />
+  </div>
+  <div>
+    <input type="radio" formControlName="errorItem" value="Error5" />
+    <label>Error5</label>
+    <input type="text" formControlName="error51" name="error51" id="error51" />
+  </div>
+  <div>
+    <input type="radio" formControlName="errorItem" value="Error6" />
+    <label>Error6</label>
+    <input type="text" formControlName="error61" name="error61" id="error61" />
+  </div>
+  <div>{{ group.controls['errorItem'].value }}:{{ group.valid }}</div>
+  <div>{{ group.controls['error21'].value }}:{{ group.controls['error21'].valid }}</div>
+  <div>{{ group.controls['error41'].value }}:{{ group.controls['error41'].valid }}</div>
+  <div>{{ group.controls['error42'].value }}:{{ group.controls['error42'].valid }}</div>
+  <div>{{ group.controls['error51'].value }}:{{ group.controls['error51'].valid }}</div>
+
+  <input type="submit" value="submit" [disabled]="group.invalid" />
+</form>
